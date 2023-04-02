@@ -7,6 +7,7 @@ body {
 }
 
 .calculator-frame {
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   border: 4px solid rgb(173, 173, 173);
@@ -24,7 +25,9 @@ body {
 
 .calculator-bottom {
   display: flex;
-  flex: 3 0 auto;
+  flex-grow: 1;
+  margin: 25px;
+  justify-content: center;
 }
 
 /* Handles container for display of current and previous calculations */
@@ -36,24 +39,51 @@ body {
   height: 200px;
   width: 450px;
   margin-top: 25px;
+  border: 2px solid rgb(173, 173, 173);
 }
 /* Handles style for all text portions of display */
 .display {
   display: flex;
+  margin-left: auto;
+  padding-right: 20px;
 }
 /* Handles display of current calculator input */
 .display.current {
   flex: 1.5 0 auto;
+  font-size: 54px;
 }
 /* Handles display of previous calculation */
 .display.previous {
-
+  flex: 1 1 auto;
+  font-size: 32px;
+  color:rgba(0, 0, 0, 0.50);
 }
 
 .buttons {
-
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 450px;
+  height: 450px;
 }
 
-.button {
+.row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+}
 
+button {
+  flex: 1 0 auto;
+  border: 2px solid gray;
+  margin: 10px;
+  border-radius: 6px;
+  font-size: 36px;
+  max-width: 90px;
+}
+
+.hidden {
+  border: transparent;
+  background-color: transparent;
 }
